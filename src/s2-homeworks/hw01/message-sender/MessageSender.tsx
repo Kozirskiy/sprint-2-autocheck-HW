@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import { message0 } from '../HW1'
 import s from './MessageSender.module.css'
 
-// компонента, которая тестирует вашу компоненту (не изменять, any не трогать)
+// компонента, яка тестує вашу компоненту (не змінювати, any не чіпати)
 const MessageSender = (props: any) => {
     const M = props.M
     const textareaRef = useRef<HTMLTextAreaElement | null>(null);
@@ -21,6 +21,9 @@ const MessageSender = (props: any) => {
     }, [text])
 
     const addMessage = () => {
+
+        if (!text.trim()) return; // Не додавати пусті повідомлення
+
         setMessages([
             ...messages,
             {
@@ -32,7 +35,7 @@ const MessageSender = (props: any) => {
                 },
             },
         ])
-        setTimeout(() => setText(''), 4)
+        setText('')
     }
 
     const onKeyDown = (e: any) => {
@@ -50,23 +53,18 @@ const MessageSender = (props: any) => {
                     id={'hw1-textarea'}
                     className={s.textarea}
                     ref={textareaRef}
-
                     title={'Shift+Enter for send'}
                     placeholder={'Type your message'}
                     value={text}
-
                     onChange={onChange}
                     onKeyDown={onKeyDown}
                 />
                 <button
                     id={'hw1-button'}
                     className={s.button}
-
                     onClick={addMessage}
                 >
-                    {/*текст кнопки могут изменить студенты*/}
                     Send
-                    {/**/}
                 </button>
             </div>
         </>

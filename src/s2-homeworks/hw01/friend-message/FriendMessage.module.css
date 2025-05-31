@@ -1,9 +1,11 @@
 .friendMessage {
-
+    display: flex;
+    justify-content: flex-start;
 }
 
 .friendImageAndText {
-
+    display: flex;
+    align-items: center;
 }
 
 .friendImageAndText img {
@@ -11,11 +13,26 @@
 }
 
 .friendText {
-
+    position: relative;
+    background-color: #59008a;
+    border-radius: 10px 10px 10px 0; /* Закруглення для лівого верхнього кута */
+    padding: 8px 13px;
+    max-width: 100%;
+    color: #FFFFFF;
+    margin-left: 10px; /* Відступ для хвостика */
 }
 
 .friendText:after {
-
+    content: '';
+    position: absolute;
+    left: -10px; /* Хвостик зліва */
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: #59008a; /* Колір хвостика */
+    border-left: 0;
+    border-bottom: 0;
 }
 
 .friendName {
@@ -27,5 +44,14 @@
 }
 
 .friendTime {
-
+    font-size: 12px;
+}
+.avatar {
+    scale: 70%;
+}
+.avatarAndTimeBox {
+    display: flex;
+    flex-direction: column;  /* Розташування елементів у стовпчик */
+    align-items: center;     /* Горизонтальне вирівнювання по центру */
+    gap: 2px;               /* Відступ між аватаркою і часом */
 }
