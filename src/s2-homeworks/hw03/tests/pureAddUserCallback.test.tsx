@@ -1,18 +1,24 @@
+import { pureAddUserCallback } from '../HW3'
+import { UserType } from '../HW3'
 import React from 'react'
-import {pureAddUserCallback} from '../HW3'
 
-let initialState: any[]
-const setName = (a: any[]) => {
-    initialState = a
+let users: UserType[] = []
+
+const mockSetUsers: React.Dispatch<React.SetStateAction<UserType[]>> = (action) => {
+    if (typeof action === 'function') {
+        users = (action as (prevState: UserType[]) => UserType[])(users)
+    } else {
+        users = action
+    }
 }
 
 beforeEach(() => {
-    initialState = []
+    users = []
 })
 
 test('name 1', () => {
-    pureAddUserCallback('name', setName, initialState)
-    expect(initialState.length).toBe(1)
-    expect(initialState[0].name).toBe('name')
-    expect(!!initialState[0]._id).toBe(true)
+    pureAddUserCallback('name', mockSetUsers, users)
+    expect(users.length).toBe(1)
+    expect(users[0].name).toBe('name')
+    expect(!!users[0]._id).toBe(true)
 })

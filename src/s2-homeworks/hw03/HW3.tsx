@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
-import { v1 } from 'uuid'
+import React, {useState} from 'react'
+import {v1} from 'uuid'
 import s2 from '../../s1-main/App.module.css'
 import GreetingContainer from './GreetingContainer'
 
 /*
 * 1 - описать тип UserType
+*
 * 2 - указать нужный тип в useState с users
+*
 * 3 - дописать типы и логику функции pureAddUserCallback и проверить её тестами
 * 4 - в файле GreetingContainer.tsx дописать типизацию пропсов
 * 5 - в файле GreetingContainer.tsx указать нужные типы в useState с name и error
@@ -19,26 +21,28 @@ import GreetingContainer from './GreetingContainer'
 
 // types
 export type UserType = {
-    _id: any // need to fix any
-    name: any // need to fix any
+    _id: string
+    name: string
 }
 
-export const pureAddUserCallback = (name: any, setUsers: any, users: any) => { // need to fix any
-    const user = { // need to fix
+export const pureAddUserCallback = (name: string, setUsers: React.Dispatch<React.SetStateAction<UserType[]>>, users: UserType[]) => {
+    const user: UserType = {
+        _id: v1(),
+        name
     }
     setUsers([...users, user])
 }
 
 const HW3 = () => {
-    const [users, setUsers] = useState<any>([]) // need to fix any
+    const [users, setUsers] = useState<UserType[]>([])
 
-    const addUserCallback = (name: any) => { // need to fix any
+    const addUserCallback = (name: string) => { // need to fix any
         pureAddUserCallback(name, setUsers, users)
     }
 
     return (
-        <div id={'hw3'}>
-            <div className={s2.hwTitle}>Homework #3</div>
+        <div id={'hw3'} className={s2.container}>
+            <div className={s2.hwTitle}>✅Hometask №3</div>
             {/*для автоматической проверки дз (не менять)*/}
 
             <div className={s2.hw}>
@@ -47,6 +51,7 @@ const HW3 = () => {
                     addUserCallback={addUserCallback}
                 />
             </div>
+            <hr style={{marginTop: '20px', marginBottom: '20px'}}/>
         </div>
     )
 }
