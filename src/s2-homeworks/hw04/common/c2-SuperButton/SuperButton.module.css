@@ -10,13 +10,7 @@
 
     width: 132px;
     height: 30px;
-    /*top: 1465px;*/
-    /*left: 574px;*/
     border-radius: 3px;
-    /*padding-top: 5px;*/
-    /*padding-right: 24px;*/
-    /*padding-bottom: 5px;*/
-    /*padding-left: 24px;*/
     gap: 10px;
 
 }
@@ -28,17 +22,17 @@
 }
 
 .red {
-    background-color: #f44336;
+    background-color: #CC1439;
     color: white;
 }
 
 .secondary {
-    background-color: #e0e0e0;
-    color: #333;
+    background-color: white;
+    color: #0066CC;
+    border: 1px solid #0066CC;
 }
 
 .disabled {
-
     background-color: #004D99;
     color: #888;
     cursor: not-allowed;
@@ -47,12 +41,18 @@
 /* Ховеры */
 .default:hover {
     background-color: #0080FF;
+    transform: scaleX(1.2);
+    transition: ease 0.5s;
 }
 .red:hover {
-    background-color: #d32f2f;
+    background-color: #FF1A47;
+    transform: scaleX(1.2);
+    transition: ease 0.5s;
 }
 .secondary:hover {
-    background-color: #d6d6d6;
+    background-color: white;
+    transform: scaleX(1.2);
+    transition: ease 0.5s;
 }
 
 /* Active */
