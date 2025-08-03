@@ -15,6 +15,7 @@ function Pages() {
     return (
         <div>
             {/*Routes выбирает первый подходящий роут*/}
+            <Route path="/" element={<Navigate to={PATH.PRE_JUNIOR} />} />
             <Routes>
                 {/*роутинг будут писать студенты*/}
                 {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
