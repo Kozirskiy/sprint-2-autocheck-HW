@@ -1,8 +1,23 @@
-.burgerMenuIcon {
-}
-
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 16px 24px;
+    background-color: #007acc; /* основной цвет */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header h1 {
+.burgerMenuIcon {
+    width: 28px;
+    height: 28px;
+    margin-right: 16px;
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
 }

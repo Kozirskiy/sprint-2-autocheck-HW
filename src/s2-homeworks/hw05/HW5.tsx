@@ -10,6 +10,12 @@ import Pages from './Pages'
 * */
 
 function HW5() {
+
+
+    // const [menuOpen, setMenuOpen] = useState(false)
+    //
+    // const handleOpen = () => setMenuOpen(true)
+    // const handleClose = () => setMenuOpen(false)
     return (
         <HashRouter>
             {/*в gh-pages лучше работает HashRouter, с BrowserRouter скорее всего не пройдёт тест*/}
