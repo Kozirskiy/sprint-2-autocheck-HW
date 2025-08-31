@@ -1,7 +1,11 @@
 .spanBlock {
+    display: flex;
 }
-
+.spanBlock img {
+    margin-right: 15px;
+}
 .span {
+
 }
 
 .input {

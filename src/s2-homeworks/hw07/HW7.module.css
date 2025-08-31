@@ -1,2 +1,6 @@
 .container {
+    display: flex;
+}
+.container div {
+    margin-right: 127px;
 }

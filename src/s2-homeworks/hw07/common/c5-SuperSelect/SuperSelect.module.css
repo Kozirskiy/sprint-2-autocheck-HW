@@ -1,9 +1,31 @@
 .select {
+    width: 165px;
+    height: 24px;
 }
 
 .select:focus {
-}
 
+}
 
 .option:hover {
 }
+
+input[type="radio"] {
+    transform: scale(1.5); /* 1.5 = 150% від стандартного розміру */
+    margin-right: 11px;/* щоб не злипався з текстом */
+
+}
+/*input[type="radio"]:checked {*/
+/*    border-color: #59008a;     !* обводка коли вибраний *!*/
+/*}*/
+/*input[type="radio"]:checked::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    width: 12px;*/
+/*    height: 12px;*/
+/*    background: #33ffaf;       !* колір вибраного кружечка *!*/
+/*    border-radius: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
