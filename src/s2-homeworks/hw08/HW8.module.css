@@ -1,23 +1,73 @@
 .item {
+
 }
 
 .item:last-of-type {
+
 }
 
 .users {
+    width: 100%;
+    border-collapse: collapse;
+
 }
 
 .buttonsContainer {
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+    margin-bottom: 16px;
 }
 
 .container {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+    margin-bottom: 30px;
 }
 
 .thead {
+    background: #E5E5E5;
+    font-weight: 600;
 }
 
 .nameCol {
+
 }
 
 .ageCol {
+
 }
+
+/*.container {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 16px;*/
+/*}*/
+
+/*.buttonsContainer {*/
+/*    display: flex;*/
+/*    gap: 12px;*/
+/*    margin-bottom: 16px;*/
+/*}*/
+
+/*.users {*/
+/*    width: 100%;*/
+/*    border-collapse: collapse;*/
+/*}*/
+
+.users td {
+
+    padding: 6px;
+}
+
+/*.thead td {*/
+/*    font-weight: bold;*/
+/*    background-color: #f0f0f0;*/
+/*}*/
+
+/*.userRow:nth-child(even) {*/
+/*    background-color: #fafafa;*/
+/*}*/

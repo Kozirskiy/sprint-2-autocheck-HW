@@ -4,15 +4,21 @@ type ActionType =
     | { type: 'sort'; payload: 'up' | 'down' }
     | { type: 'check'; payload: number }
 
-export const homeWorkReducer = (state: any, action: any): any => { // need to fix any
+export const homeWorkReducer = (state: UserType[], action: ActionType): UserType[] => {
     switch (action.type) {
-        case 'sort': { // by name
+        case 'sort': {
+            const newState = [...state]
+                .sort((a, b) => {
+                    return action.payload === 'up'
+                        ? a.name.localeCompare(b.name) // A → Z
+                        : b.name.localeCompare(a.name) // Z → A
+                })
 
-            return state // need to fix
+            return newState
         }
         case 'check': {
 
-            return state // need to fix
+            return state.filter(u => u.age >= action.payload)
         }
         default:
             return state

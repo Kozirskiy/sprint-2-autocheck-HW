@@ -1,14 +1,25 @@
 .buttonsContainer {
+    margin-bottom: 30px;
+}
+.superBTN {
+    margin-right: 12px;
+    width: 84px;
+    height: 30px;
 }
 
 .clock {
 }
 
 .watch {
+    color: #2c2c2c;
 }
 
 .watch strong {
+    color: #000000;
 }
 
 .more {
+    color: #757575;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
